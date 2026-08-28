@@ -6,37 +6,26 @@ Append-only. Write the row **before** you look up the answer — blocked >10 min
 |---|---|---|---|---|---|---|---|---|---|
 | | | | | | | | | | |
 
-**Source** = `QB §4.2` · `NeetCode: <problem>` · `mock #2` · `timed design` · `Anki`
-**Route** (added 2026-08-01) = `decayed` — you passed a present-tense cold attempt on this item (the Week 1 gate, or a fresh blank-page check right now if it predates the gate — never "I'm confident I once knew this," that's the retrospective self-report this column exists to rule out), Track A is still correct, this miss is a spacing problem · `never-encoded` — the cold-gate routed this to B-lite/B-full, or would if you ran it now; "I just forgot" for one of these is not decay, it's the encoding never having happened at all (see below) · `unknown` — haven't run a present-tense cold attempt on this item yet; do that before assuming either
-**AI** = `—` none · `hint` · `answer` · **`caught`** = the model asserted something false and you spotted it
+- **Source** — `QB §4.2` · `NeetCode: <problem>` · `mock #2` · `timed design` · `Anki`
+- **Why** — the misconception, not the fact. A miss that only becomes an Anki card preserves the fact and never fixes the thinking. Make the card too; the row is what fixes the thinking.
+- **Route** — where the fix goes:
+  - `decayed` — you passed a cold attempt on this item (the Week 1 gate, or a blank-page check right now). A spacing problem: Anki and re-solves.
+  - `never-encoded` — the cold attempt failed, or you never ran one. Never learned: re-encode it (`study-plan.md`, Week 1), not Anki.
+  - `unknown` — run a cold attempt before assuming either.
 
----
+  "I just forgot" is only a diagnosis for `decayed`.
+- **Confidence before** — 0–100%, rated before you check. **Scored** — what you actually got after checking: hit / partial / miss, or the share of the question's answer pointers you hit. The gap between the two is the only reliable way to find what you don't know you don't know.
+- **AI** — `—` none · `hint` · `answer` · **`caught`** — the model asserted something false and you spotted it. Write this one the day it happens: `role-and-evidence.md` has a row waiting on exactly this, it's the highest-value row in that table, and you will not remember it in six weeks.
 
-## Why these columns
+**Nobody else reads this file, so the mocks are your inspection.** Every mock in the plan is AI-disabled. If the `answer` count here climbs while mock performance is flat or falling, that is the one metric that matters, and the mocks are what make it visible.
 
-**`Why I made this error`.** A miss that becomes an Anki card preserves the *fact* and never fixes the *misconception*. Make the card too — but the row is what fixes the thinking.
-
-**`Confidence before`.** Rate 0–100% before checking. The gap between confidence and score is the only reliable way to find what you don't know that you don't know, and weeks 3–6 target exactly that gap.
-
-### Why `caught` earns its own value
-
-`role-and-evidence.md` has a row waiting on exactly this — *"one case where AI was confidently wrong and you caught it"* — and it is the highest-value item in that table, because it's the only one an over-reliant candidate cannot manufacture. It's also the one you will absolutely fail to remember six weeks from now unless you capture it the day it happens. One word in this column is the capture.
-
-### Your inspection mechanism is the mock, not a reviewer
-
-Person 2's copy of this file has three AI columns *and a rule that Person 1 reads them* — because a beginner cannot catch their own slide from "I attempted it first" to "I glanced at it first," and the only person qualified to notice was otherwise never assigned to look.
-
-You have no such reviewer, so that mechanism doesn't transfer. **What you have instead is already in the plan: every mock is an AI-disabled self-test.** The coding mock, the timed design, the behavioral — all unassisted, all scheduled, all graded. If the `answer` count in this column is climbing while mock performance is flat or falling, that is §8's one metric telling you something, and the mocks are what make it visible. Watch that pairing rather than the column alone.
-
----
-
-## Weekly review of this file (30 min, part of the weekly review)
+## Weekly review of this file (30 min)
 
 Read for **patterns, not entries**.
 
 - Three rows about the same misconception is a curriculum item, not three mistakes. It goes at the top of next week's repo-conceptual work.
-- **Where did confidence most exceed score?** That gap is next week's syllabus. A systematically overconfident category is more dangerous than a low-scoring one — you'll never choose to study it.
-- Rows where the *why* is "I just forgot": that's not an analysis. Check the `Route` column first. If it says `decayed`, this is genuinely a spacing problem — schedule it. If it says `never-encoded` or `unknown`, "I just forgot" is the wrong diagnosis: the encoding never happened (possibly because the concept was AI-introduced and only approved, not derived) — send it to repo-conceptual work as a real Track B item (see `study-plan.md`'s ownership cold-gate), not to Anki.
+- Where did confidence most exceed score? That is next week's syllabus. A systematically overconfident category is more dangerous than a low-scoring one — you'll never choose to study it.
+- Rows whose *why* is "I just forgot": check `Route`. `decayed` → schedule it. `never-encoded` or `unknown` → the encoding never happened; send it to re-encoding, not Anki.
 
 ## Week 6
 

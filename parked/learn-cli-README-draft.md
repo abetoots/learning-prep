@@ -6,7 +6,7 @@
 >
 > **Two reasons it is deferred:**
 >
-> 1. **Wrong substrate.** Its corpus is generated from docs you wrote yourself, so it can only train recall of the material you are *already strongest on*. It cannot touch what `external-comparison.md` identifies as the actual gaps: canonical system-design vocabulary, foreign design prompts, and timed algorithms.
+> 1. **Wrong substrate.** Its corpus is generated from docs you wrote yourself, so it can only train recall of the material you are *already strongest on*. It cannot touch what `../interview-prep/external-comparison.md` identifies as the actual gaps: canonical system-design vocabulary, foreign design prompts, and timed algorithms.
 > 2. **It violates LEARNING-SYSTEM §3.4.** Your own docs are not an *external* reference answer. §3.4 requires that something outside your own head can tell you you're wrong. For re-onboarding to your own codebase — the stated primary use — that's fine, because the code arbitrates. For interview prep it silently substitutes self-authored recall for market-shaped feedback.
 >
 > **The honest framing:** this is a legitimate product conflated with an illegitimate study method. Those are two projects with different acceptance criteria, and this README is written as if they are one thing.

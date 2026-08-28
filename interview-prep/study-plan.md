@@ -4,48 +4,37 @@
 
 **The premise.** You already know this material — you proved that by building the system. What you can't reliably do yet is produce it on demand, out loud, with a clock running. So this plan *tests* you from day one rather than teaching you. Re-reading your own docs is not the study method here; it's raw material for recall, nothing more.
 
-**The premise's one qualification (added 2026-08-01).** "You already know this" assumed the repo was entirely hand-written. Some of it was built via agentic coding: parts you already understood but an AI implemented (the premise still holds — you reviewed and reasoned about them), and parts an AI proposed as best practice that you approved at the time without independently deriving them (the premise may not hold — real first-time understanding may never have happened, which means jumping straight to retrieval tests memory of something that was never learned, not something that decayed). Whether you actually knew a given concept before the AI proposed it is a fact only you hold — no doc, ADR, or git history can determine it, and *asking yourself to remember* is unreliable too (today's familiarity with an ADR you've now read several times gets misremembered as having been there from the start). So this isn't solved by memory. Week 1 opens with an **ownership cold-gate** that decides it the honest way: by what you can produce right now, cold, before rereading anything. See [`AI-OWNERSHIP-GAP_MULTI_REVIEW.md`](../AI-OWNERSHIP-GAP_MULTI_REVIEW.md) for the full design discussion.
+**One qualification.** "You already know this" assumed the repo was hand-written. Part of it was built with agentic coding — some of it you understood and an AI implemented; some of it an AI proposed and you approved without deriving it yourself. For the second kind there may be nothing to reactivate. You can't tell which is which from memory (a reread ADR feels known whether or not it is), so Week 1 opens with a cold-gate that decides it by what you can produce right now.
 
 **The cost: ~11 hours a week for six weeks (≈67 hours).** If that isn't available, there's a 9-hour version below that names exactly what it gives up.
 
 **Three kinds of work run in parallel every week**, and they train different things — see the budget table below. Doing only the one that feels productive is the most common way this fails.
 
-## The honest budget
+## The budget
 
-**~11 hrs/week (≈67 total, including a 1-hour Week 0).** The earlier "9 hrs/week" figure did not survive arithmetic: at the plan's own bar of 25 minutes per problem, 8 NeetCode problems is 3.3 hours by itself, before daily Anki or re-solves. A budget you cannot hit is worse than an honest one, because you'll read the shortfall as a personal failure rather than a planning error.
+**~11 hrs/week (≈67 total, including a 1-hour Week 0).** At 25 minutes per problem, 8 NeetCode problems is 3.3 hours by itself, before Anki or re-solves — which is why the earlier 9-hour figure didn't hold.
 
 | | Per week | What it covers |
 |---|---|---|
 | **Repo conceptual** | 2–4h | The question bank, ADRs, architecture summaries. Trains explanation, tradeoff reasoning, your project narrative. *Your differentiator.* |
-| **Drills** (standardized) | 3–4h | NeetCode problems and re-solves. Trains algorithm speed under a clock. *Repo prep cannot substitute — see "Honest routing".* |
+| **Drills** (standardized) | 3–4h | NeetCode problems and re-solves. Trains algorithm speed under a clock. *Repo prep cannot substitute — see "Where repo prep loses".* |
 | **Simulation** | 1–4h | Mocks, timed design. Trains delivery under observation. |
-| **Anki** | ~1.5h | 15 min/day, 6 days. **Tracked outside the streams** — it's a daily habit, not a session, and burying it inside Drills is what made the old budget lie. |
+| **Anki** | ~1.5h | 15 min/day, 6 days. **Tracked outside the three work types above** — it's a daily habit, not a session, and burying it inside Drills is what made the old budget lie. |
 | **Weekly review** | 0.5h | See below. Not optional; it's where the error log turns into next week's plan. |
 
 ### If you genuinely only have 9 hours/week
 
-That's 55 hours, so **12 hours have to come out** — and there is no painless way to do it. Trimming a little from everything gets you to about 10.4 hrs/week, not 9. Here is a set of cuts that actually reaches the number:
+That's 55 hours, so 12 have to come out. Trimming a little from everything doesn't get there; these cuts do:
 
 | Cut | Saves | What it costs you |
 |---|---|---|
 | Anki to 10 min/day | 3h | Slower deck maturation; the ≥85% retention bar gets harder |
 | Drills to 6 problems every week (6·6·6·6·6·4 = **34**) | 2.5h | Below the 40–50 bar. Algorithm speed is the signal you're sacrificing |
-| Repo conceptual to 2h from week 2 onward | 5h | Less depth on the question bank; fewer [ALT] alternatives tables |
+| Repo conceptual to 2h from week 2 onward | 5h | Less depth on the question bank; fewer of the question bank's alternatives tables |
 | Drop mock #3 (the 45-min live coding mock **plus its debrief**) | 1.5h | One less rep under observation — the most painful cut here |
 | **Total** | **12h** | **≈55h, ~9 hrs/week** |
 
-**Then mark "Coding" and "Conceptual depth" as "not yet" in the readiness rubric unless you clear those bars anyway.** The point of a rubric is that you don't get to move the bar because you ran out of time. Cutting scope explicitly beats missing a budget silently — but it is still cutting scope, and the plan won't pretend otherwise.
-
-### The one hour that moved (2026-07-22)
-
-The AI-collaboration round in week 4 costs 1 hour. It is **funded from Repo conceptual, not Drills** — week 4 goes repo conceptual 3h→2h, simulation 2h→3h. Total budget unchanged.
-
-Two rejected alternatives, recorded so the reasoning doesn't have to be re-derived:
-
-- **Cutting Drills (NeetCode).** Proposed at 30–40% during review and withdrawn. This plan sits at 40 problems against its own stated pass bar of 40–50. Cutting below your own rubric on a gate that verifiably still exists, in order to fund a round type that is real but not yet universal, trades a known gate for a speculative one. Coding rounds have been *added to*, not replaced.
-- **Adding the hour to the total.** The budget already survived one honest-arithmetic pass. Growing it silently is how it becomes fiction again.
-
-What the hour costs: architecture summary #3. Named, not hidden — see week 4.
+**Then mark "Coding" and "Conceptual depth" as "not yet" in the readiness rubric** unless you clear those bars anyway. Cutting scope explicitly beats missing a budget silently — but it is still cutting scope.
 
 ---
 
@@ -54,7 +43,7 @@ What the hour costs: architecture summary #3. Named, not hidden — see week 4.
 Three things to write tonight. Skipping them is the most common way a plan like this quietly fails.
 
 1. **Competency list.** You already have one: the **readiness rubric** at the bottom of this document. Read it *now*, not in week 6. It defines what "ready" means in testable terms, and every week's work should visibly move a rubric row. Score yourself against it honestly in week 1 to get a baseline — you cannot see progress without one.
-2. **Error log.** [`error-log.md`](error-log.md) — **it now exists as an actual file; open it and add the first row in week 1.** Until 2026-07-22 this was a concept in a document rather than an artifact on disk, which is the most common way the highest-leverage part of a plan quietly never happens. Every entry: `DATE | What I got wrong | What I thought was true | What's actually true | Why I made this error | Route | Confidence before`. (`Route` — added 2026-08-01 — distinguishes decayed retrieval from never-encoded; see `error-log.md`.) The *why* column is the point — a miss that becomes an Anki card preserves the *fact* but never fixes the *misconception*. Both go in.
+2. **Error log.** Open [`error-log.md`](error-log.md) and read the column legend. The first row goes in during week 1. The *why* column is the point — a miss that only becomes an Anki card preserves the fact but never fixes the misconception. Both go in.
 3. **Implementation intention.** Write the literal sentence: *"After [something I already do every day], I will do [repo conceptual / drills / simulation] at [place]."* Motivation is not a plan. Also fix your stuck-rule now: **if blocked >10 minutes, write the error-log entry before looking anything up.**
 
 **Sleep floor: 7–8 hours, non-negotiable, especially weeks 3 and 6.** Sleep loss before study impairs encoding; sleep loss after impairs consolidation. Cutting sleep to add study hours is a net loss, and it is the single most common self-inflicted wound in a 6-week push.
@@ -68,14 +57,14 @@ Three things to write tonight. Skipping them is the most common way a plan like 
 ***Re-solves are capped at 2 problems (~40 min) per week.*** *In the 3-hour Drills weeks, six new problems consume 2.5h and only one re-solve fits — do one. An uncapped "re-solve your misses" is how a bounded week quietly becomes an unbounded one.*
 
 ### Week 1 — Baseline + foundations
-- **Repo conceptual (4h): the ownership cold-gate runs first (60 min), before you open any ADR.** For each of the four core ADRs (0008, 0009, 0013, 0016), attempt cold — from memory alone, nothing open — to state the mechanism, the failure mode it prevents, and one rejected alternative. Reading first would contaminate this: a freshly-reread ADR feels "known" whether or not it actually is (the fluency illusion). Rate each item on four axes (legend and format in `question-bank.md`'s header): **P**rior exposure, **O**rigination, **C**urrent cold ability, **C**laim strength. **Current cold ability is what routes you** — the other three only affect how you *word* the claim later, never whether you need more study:
-  - `defends` (≥70% of the answer-pointer essentials, unaided, names the invariant/failure mode, gives one rejected alternative when relevant) → you're in Track A for this item, continue below.
-  - `recognizes` (partial, no real reconstruction) → **B-lite** (25 min): 8 min re-read the ADR · 7 min self-explain · 7 min blank-page retry · 3 min compare/log.
-  - `blank` → **B-full** (50 min): 15 min worked-example re-read · 15 min completion-problem/partial retry · 15 min blank attempt · 5 min compare/log.
+- **Repo conceptual (4h): the ownership cold-gate runs first (60 min), before you open any ADR.** For each of the four core ADRs (0008, 0009, 0013, 0016), state from memory alone the mechanism, the failure mode it prevents, and one rejected alternative. Reading first would contaminate this — a freshly reread ADR feels known whether or not it is. Mark each one:
+  - `defends` — mechanism, failure mode and a rejected alternative mostly right (≥70%), unaided. Carry on below.
+  - `recognizes` → re-encode first, ~25 min: reread the ADR, self-explain it, retry from a blank page, compare and log.
+  - `blank` → re-encode first, ~50 min: the same, with a worked-example read and a partial-completion retry before the blank attempt.
 
-  **Funding rule:** re-encoding time comes out of this week's remaining Repo-conceptual time — drop [ALT]-table depth first. It never comes out of Drills; NeetCode already sits at the floor of its own 40–50 problem pass bar (see the rejected 30–40% Drills cut below), and trading a verified gate for a speculative one is the wrong trade twice over. **If total re-encoding time across the plan exceeds 4 hours, mark `Conceptual depth` "not yet" on the rubric rather than silently absorbing the cost** — same rule the plan already applies to the Coding row in week 6.
+  Re-encoding time comes out of this week's Repo-conceptual budget (drop [ALT]-table depth first), never out of Drills. If re-encoding across the plan passes 4 hours, mark `Conceptual depth` "not yet" on the rubric rather than absorbing it silently. Skipped the gate for an item and later found you can't defend it? That's an error-log row with `Route = never-encoded`.
 
-  *Then, for whatever routed Track A:* read the four core ADRs *as an outsider*, write a one-page architecture summary from memory, then diff it against the docs. Answer question-bank sections 1 and 4 aloud, ungraded — this is your **baseline pass**. *(Defer the campaigns/profiles/engines READMEs to week 2 — this week is already at the edge of what fits.)*
+  *Then, for the ADRs you could defend:* read the four core ADRs *as an outsider*, write a one-page architecture summary from memory, then diff it against the docs. Answer question-bank sections 1 and 4 aloud, ungraded — this is your **baseline pass**. *(Defer the campaigns/profiles/engines READMEs to week 2 — this week is already at the edge of what fits.)*
 - **Drills (4h):** NeetCode: arrays & hashing + two pointers (**8 problems**, medium-weighted). Separately, set up Anki with the starter decks (below) and start the daily 15 min.
 - **Simulation (1h):** **Record yourself** answering Q1.1 and Q4.1 — these two only; this is the baseline *recording*, distinct from the ungraded baseline pass above. Listen back. Note filler, missing structure.
 - **Checkpoint:** baseline pass done · Q1.1/Q4.1 recorded · rubric scored for the first time · 8+ problems solved · architecture summary written · Anki streak ≥3 days.
@@ -95,11 +84,11 @@ Three things to write tonight. Skipping them is the most common way a plan like 
 ### Week 4 — Security, testing, breadth vocabulary
 - **Repo conceptual (2h):** Sections 5 and 6 aloud, with confidence ratings. Do the external-comparison gap list (see `external-comparison.md` → the **"SD component vocabulary"** row, marked *Better drilled elsewhere*): pick the 3 weakest (typically: consistent hashing, sharding/partitioning strategy, cache invalidation, consensus/leader election). **70 min reading them as case studies** — for each, where it was actually used, what it cost, and where it failed; self-explain rather than skim. Then **20 min sources-closed**: sketch a contrasting-case table — *when you'd reach for it, when you deliberately wouldn't, what breaks if you pick wrong* — check it, and log the misses.
 
-  *That 20-minute table is a **comprehension check**, not the retrieval that makes this stick. Reconstructing something you read an hour ago mostly tests working memory. **The real retrieval is scheduled for week 6**, after some forgetting.* *(Summary #3, "tenant isolation as an invariant", is **cut** — see the hour reallocation note below. Of the three from-memory summaries it had the lowest marginal return, and the invariant is already covered in question-bank §5.)*
+  *That 20-minute table is a **comprehension check**, not the retrieval that makes this stick. Reconstructing something you read an hour ago mostly tests working memory. **The real retrieval is scheduled for week 6**, after some forgetting.*
 - **Drills (4h):** NeetCode: heaps + intervals + greedy (**8 problems**). Re-solve 2 of week 3's misses. (Your Anki deck now includes the week-3 miss cards.)
-- **Simulation (3h):** Timed design run #2 on a *non-repo-shaped* prompt you've never built: news feed or chat system (from Hello Interview / ByteByteGo lists) — tests transfer, not recall. **Plus the AI-collaboration round (1h, new):** three steps, and the order is the whole point.
+- **Simulation (3h):** Timed design run #2 on a *non-repo-shaped* prompt you've never built: news feed or chat system (from Hello Interview / ByteByteGo lists) — tests transfer, not recall. **Plus the AI-collaboration round (1h):** three steps, and the order is the whole point.
 
-  1. **The answer key was built last week** (week 3, 15 min — see below). Don't re-read it.
+  1. **The answer key was built last week** (week 3, 15 min). Don't re-read it.
   2. **Review cold (45 min).** Post-quality review, as you'd actually write it.
   3. **Grade against the key (15 min).** Count hits, misses, **and false positives** — things you flagged that weren't defects.
 
@@ -141,7 +130,7 @@ Anki, 15 min/day, 5+ days/week. Decks:
 
 ---
 
-## Honest routing: where repo-based prep loses (use the standard tools)
+## Where repo prep loses — use the standard tools
 
 This package's question bank trains **explanation and judgment**. Four interview signals it cannot train, and what to use instead:
 
@@ -151,7 +140,7 @@ This package's question bank trains **explanation and judgment**. Four interview
 | **Recall atoms** (complexities, definitions, command/API trivia) | Reading your own ADRs re-recognizes; interviews demand *production* of facts from a cold start. Recognition ≠ recall — only testing-effect repetition builds the latter. | **Anki** with the decks above. | 15 min/day, ≥5 days/wk. Bar: mature-card retention ≥85%. |
 | **Standard system-design vocabulary and canonical problems** | The repo teaches one architecture deeply. Interviewers calibrate on the canon (rate limiter, URL shortener, news feed, chat, notification fan-out) and on shared vocabulary (consistent hashing, CDC, cell-based isolation) you didn't need at this scale. | **System Design Primer** for vocabulary; **Hello Interview / ByteByteGo** problem walkthroughs (ByteByteGo & Grokking are paid — see external-comparison.md); one *foreign* timed design in weeks 4 and 6. | 2 canonical problems studied + 2 attempted cold. Bar: complete a foreign prompt's full artifact (requirements → estimates → API → data → deep-dives) in 45 min. |
 | **Behavioral recall under stress** | Knowing your stories ≠ retrieving the right one in 5 seconds when asked "tell me about a conflict." | STAR skeletons (week 5) + **Tech Interview Handbook's behavioral question list** as the drill bank; optionally an Anki deck of story-name → 3 bullets. | 5 polished stories mapped to ~20 standard questions. Bar: any standard behavioral question → correct story chosen and delivered in <3 min without notes. |
-| **AI-collaboration judgment** *(added 2026-07-22)* | Reading your own ADRs trains none of it, and neither does any question bank. 2026 loops probe it directly — AI-permitted coding rounds, "how did you use AI" take-homes, PR-review-of-agent-output rounds. These are **additive to** the traditional rounds, not replacements. | Week 4's AI-code-review round + the `role-and-evidence.md` AI-collaboration table + the two week-5 STAR skeletons. | Bar: on a PR whose defects are **known in advance**, find ≥2 of them in 45 min with ≤1 false positive; state the delegation boundary unprompted in <2 min. *Weakest-evidence row in this table — see the caveat under the rubric.* |
+| **AI-collaboration judgment** | Reading your own ADRs trains none of it, and neither does any question bank. 2026 loops probe it directly — AI-permitted coding rounds, "how did you use AI" take-homes, PR-review-of-agent-output rounds. These are **additive to** the traditional rounds, not replacements. | Week 4's AI-code-review round + the `role-and-evidence.md` AI-collaboration table + the two week-5 STAR skeletons. | Bar: on a PR whose defects are **known in advance**, find ≥2 of them in 45 min with ≤1 false positive; state the delegation boundary unprompted in <2 min. |
 
 What repo prep **wins** at — and standardized banks can't provide: a real production narrative with money-critical correctness decisions, honest failure stories, and artifacts (ADRs, runbook, pinned tests) you can walk through. Lead with it in project deep-dives; lean on the standard tools for everything above.
 
@@ -159,7 +148,7 @@ What repo prep **wins** at — and standardized banks can't provide: a real prod
 
 ## Readiness rubric (this is your competency list — read it in week 0, score it in week 1 and week 6)
 
-Pass = every row at "ready". Any "not yet" extends that stream by a week.
+Pass = every row at "ready". Any "not yet" adds a week of that kind of work.
 
 | Signal | Ready looks like | Evidence |
 |---|---|---|
@@ -174,95 +163,16 @@ Pass = every row at "ready". Any "not yet" extends that stream by a week.
 | Calibration | Confidence ratings track actual scores within ~15 points; no category where you're systematically overconfident | Confidence log, weeks 3–6 |
 | Simulation | Full mock loop completed; debriefs show no repeated failure pattern from earlier mocks | Week 6 debriefs |
 
-### Caveat on the ownership-tag mechanism (added 2026-08-01)
+**If you have to cut a rubric row, cut AI-collaboration's review round first** and keep the two week-5 STAR skeletons. The verbal probe ("how do you use AI?") is near-universal; the formal review round is the part resting on weaker evidence.
 
-The four-axis tags in `role-and-evidence.md` and `question-bank.md` are **self-tagged only** — never inferred by an AI from an ADR's prose or its git history, because whether you knew something before it was proposed is a fact only you hold. The `Current cold ability` axis is the one exception to "self-report is unreliable": it isn't a memory question, it's a right-now performance result (§8/§10 of the framework — route by present-tense cold attempt, never by recollection of the past). If you skip the cold-gate for an item and later find yourself unable to defend it, treat that discovery exactly like any other error-log entry whose `why` is "I never actually encoded this" — see `error-log.md`.
+## Weekly time audit
 
-### Caveat on the AI-collaboration row
-
-**This row rests on weaker evidence than every other row in the rubric.** The role findings behind this plan's second pass came from hard data — 180M job postings, Stanford's employment series, an NBER firm survey. The claim that 2026 loops contain AI-review and AI-permitted rounds came from trade press and interview-coaching sites, parties with an incentive to say the interview changed. No hiring data was found establishing how common those rounds actually are.
-
-It is kept anyway on a cost argument, not an evidence argument: the prep is one hour, it reuses code-review judgment you already have, and the *verbal* probe ("so how do you use AI?") is near-universal and cheap to fail regardless of whether the formal rounds are. That is a bet, and it is labelled as one.
-
-**If you want to cut something, cut this row first** — keep the two week-5 STAR skeletons, drop the review round. That preserves the answer to the common probe and costs you only the artifact behind it.
-
-## Weekly time audit (keep yourself honest)
-
-Log actual hours per stream weekly. If Drills repeatedly starves (the common failure — conceptual reading feels productive, drilling feels bad), swap the order: drills first in every session, reading second.
+Log actual hours per work type weekly. If Drills repeatedly starves (the common failure — conceptual reading feels productive, drilling feels bad), swap the order: drills first in every session, reading second.
 
 ---
 
-## Where the framework yields
+## What counts as practice, not bureaucracy
 
-> **Framework alignment** (audit trail — not needed to run the plan). This is a **Track A (Reactivate)** instantiation of [LEARNING-SYSTEM.md](../../learning-system/LEARNING-SYSTEM.md): existing competence that needs to become accessible under pressure. Track A's binding constraints are **retrieval** and **calibration** — which is why testing is the study method from day one and why confidence ratings appear throughout. The framework has authority over *method*; this plan has authority over *what a senior backend loop actually demands*.
->
-> Naming: this plan's three **work types** are concurrent activities. They are unrelated to the framework's **Tracks**, which are learner starting states. Different axis, deliberately different word.
->
-> **Where this instantiation is mixed-track, not pure Track A.** A repo built partly via agentic coding can leave a single "Track A" learner with real Track B pockets — items an AI proposed and the learner only approved, never independently derived. The framework now names this in §2 and §10 (added 2026-08-01); this plan's response is the Week 1 ownership cold-gate above, which routes *per item*, not per effort.
->
-> **Why Week 0 has three items and not the framework's three.** Framework §3 asks for a competency list, a **prerequisite sketch**, and an error log. The prerequisite sketch exists to stop a learner studying above their level — a Track B and C problem. You already have the prerequisites; that is what "reactivate" means. What Track A actually fails on is showing up consistently under deadline pressure, so the sketch is replaced with an implementation intention (L0). If you find yourself repeatedly blocked by missing fundamentals, that assumption was wrong — go build the sketch.
+This plan has you making artifacts from week 1 — summaries, diagrams, debriefs, timed designs — which §11 of the learning framework this plan derives from ([LEARNING-SYSTEM.md](../../learning-system/LEARNING-SYSTEM.md)) would normally warn against. The line: a practice artifact qualifies only if it is **produced under test-like constraints** (from memory, or timed), **checked immediately against a reference**, and **carries no ongoing maintenance cost**. Anything you have to keep tidy, reorganize, or migrate has failed the third test. The weekly keep/cut audit applies this.
 
-The framework is general learning science; this plan encodes what a senior backend loop actually tests. Four places the plan deliberately does something the framework would otherwise discourage, and why:
-
-- **Artifacts from day one, against §11's "start tiny."** The framework says produce three artifacts and add nothing for two weeks. This plan mandates a baseline recording, two architecture summaries, an alternatives table, and a design artifact inside weeks 1–2. That looks like a direct violation, and the distinction matters: **§11's target is artifacts that *organize* practice — note systems, card decks, dashboards — which displace retrieval while feeling productive. These artifacts *are* the retrieval.** An architecture summary written from memory is blank-page recall. A timed design artifact is the exam itself.
-
-  So the line doesn't let anything through. A practice artifact qualifies only if it meets all three: **produced under test-like constraints** (from memory, or timed), **checked immediately against a reference**, and **carrying no ongoing maintenance cost**. Anything you have to keep tidy, re-organize, or migrate has failed the third test and is exactly what §11 is about.
-
-  Honest weak case: the week-1 baseline recording doesn't fully qualify — it's a calibration instrument rather than retrieval practice. It earns its place by being *one* recording that establishes a baseline you can't otherwise see, and it should not become a habit of recording everything.
-- **Blocked practice in weeks 1–5.** The framework prefers mixing problem types to train method selection. But it also says not to mix before baseline competence — so NeetCode runs blocked by category through week 5, and week 6 goes fully mixed and timed. That is the framework's own rule, correctly applied.
-- **Heavy volume on a deadline.** The framework optimizes for durable learning; this plan optimizes for peak performance on a known date. Some of the week-6 taper is deliberately about accessibility rather than long-term retention.
-- **Recognition-heavy source material.** Re-reading your own ADRs is low-value by framework standards. It is retained only as *input* to a from-memory reconstruction — never as the study method itself.
-
-Where the framework does **not** yield: no plan is valid without delayed retrieval, analyzed errors, and a calibration check. Those were added above, not negotiated away.
-
----
-
-## Sign-off record
-
-### Third pass — 2026-08-01 (agentic-coding ownership gap)
-
-Audited after the user flagged that the repo was built partly via agentic coding, breaking the plan's "you already know this" premise for an unknown slice of the content. Two-stage multi-model review: Stage 0 signed off the fix plan itself ([`PLAN-SIGNOFF_MULTI_REVIEW.md`](../PLAN-SIGNOFF_MULTI_REVIEW.md)), Stage 1 designed the mechanism ([`AI-OWNERSHIP-GAP_MULTI_REVIEW.md`](../AI-OWNERSHIP-GAP_MULTI_REVIEW.md)). Panel: Claude (lead) · GPT-5.2/Codex · Gemini 3.1 Pro High (Antigravity).
-
-**The user's own hypothesis — "only the timeline changes" — was tested and rejected by both external legs independently.** Three things change: the *method* for flagged items (present-tense re-encoding via Track B, not just more Track A hours), the *interview claim* (a design you can't defend cold and never originated can't be worded as "I designed" even once you understand it), and only as a consequence, the timeline.
-
-| Change | Why |
-|---|---|
-| Week 1 opens with an ownership cold-gate (60 min, before ADRs are reread) | Reading first contaminates a same-day encoding check with the fluency illusion; both legs independently cited the framework's own L9/L5 warnings for this |
-| Four-axis self-tagging (prior exposure / origination / current cold ability / claim strength), routing on `current cold ability` only | Provenance and encoding depth are different things — an AI-proposed idea the user grilled for days is well-encoded; a user-requested feature whose implementation details were rubber-stamped isn't. Routing on provenance alone would misroute both |
-| Track-B (B-lite/B-full) re-encoding funded from Repo-conceptual breadth, never Drills | Matches this file's own prior precedent: a Drills cut was proposed and explicitly withdrawn in an earlier round for trading a verified gate for a speculative one |
-| `[DYD]` questions relabeled `[EVAL]`/`[ADOPT]` in question-bank.md when claim strength isn't `designed` | Makes the honesty fix visible at the point of use instead of a metadata system nobody checks |
-| No AI-inferred classification of real content | Locked in at Stage 0: only the user knows what they knew before an AI proposed something; an AI-run "audit" would be provenance-by-proxy, and would perform the exact diagnostic the learner is supposed to do themselves |
-
-**Rejected during review:** having the panel classify real ADRs/evidence rows/questions by provenance now, to save the user the work later. Both legs and the lead agreed this violates the self-tagging constraint and risks a confidently-wrong classification the framework specifically warns against (§14).
-
-### Second pass — 2026-07-22 (upstream inputs re-examined)
-
-Re-audited after a multi-model panel re-established the target role under AI-era market conditions (see [`../ROLES-AND-DELIVERABLES_MULTI_REVIEW.md`](../ROLES-AND-DELIVERABLES_MULTI_REVIEW.md)). Panel: Claude Opus 4.8 (lead, live web research) · Gemini 3.1 Pro High · GPT-5.2/Codex.
-
-**The role did not change** — Senior Backend / Product Platform survived scrutiny and the market moved *toward* it (software engineering resilient at the category level; seniority the strongest protective factor, ICs −9% vs leadership −1.7%; backend complexity valued while frontend commoditizes). So the plan's architecture stands. Four amendments followed from the AI-era findings:
-
-| # | Change | Why |
-|---|---|---|
-| 1 | `error-log.md` now exists as a real file; Week 0 links it | It was a concept in a document, never an artifact on disk — the most common way the highest-leverage part of a plan quietly never happens |
-| 2 | AI-collaboration round added to week 4 (1h) | 2026 senior loops probe it directly; the package trained none of it |
-| 3 | Two AI STAR skeletons added to week 5; new Honest-routing row; new rubric row | The new evidence needs a spoken form and a pass bar, or it isn't trained |
-| 4 | Hour funded from Repo conceptual (summary #3 cut), **not** Drills | See "The one hour that moved" |
-
-**Rejected during review:** a proposed 30–40% cut to Drills. It would put this plan below its own 40–50 problem bar on a gate that verifiably still exists. The leg that proposed it withdrew it under challenge. Recorded because the reasoning will otherwise be re-litigated.
-
-### First pass
-
-Audited against [LEARNING-SYSTEM.md](../../learning-system/LEARNING-SYSTEM.md) layer by layer, then taken through four review rounds by two independent models (GPT-5/Codex and Gemini 3.1 Pro). Both signed off APPROVED. What the audit changed:
-
-| Layer | Finding | Fix |
-|---|---|---|
-| **L1** goals | Readiness rubric existed but sat at the end, unread until week 6 | Promoted to Week 0 as the competency list; scored in week 1 for a baseline |
-| **L8** feedback | "A miss = an Anki card" preserved the fact but never fixed the misconception | Error log with a mandatory *why* column; both the card and the entry |
-| **L9** calibration | "Self-grade" and "score honestly" are not calibration | Confidence ratings 0–100% before checking answers, weeks 3–6; new Calibration row in the rubric; week 6 targets the questions where confidence most exceeded score |
-| **L6** spacing | Second-pass re-solves waited until week 5 — a 3–4 week gap on *already-failed* items, whose retrieval strength is gone by then | Re-solves start week 2 and run weekly, explicitly capped |
-| **L0** foundations | Absent entirely from a 6-week push | Sleep floor, implementation intention, stuck-rule — all in Week 0 |
-| **L3** load | Week 1 stacked ADRs + READMEs + summary + question bank + 8–10 problems + Anki setup | READMEs deferred to week 2 |
-| **L11** artifact creep | Artifacts accumulated with no keep/cut test | Added to the weekly review, with a three-condition test for what counts as practice vs. bureaucracy |
-| **Naming** | This plan and the framework both said "Track A/B/C" meaning different things — a reader could conclude Track A means "skip LeetCode" | Renamed to Streams here; Track reserved for learner starting states |
-
-**The budget was the hardest finding, and it was pre-existing.** Both models independently did arithmetic the plan had never had done to it: at the plan's own 25-min-per-problem bar, Drills was asking for ~5.75 hours inside a 3-hour slot, and the headline "9 hrs/week" was fiction once Anki and the weekly review were counted. It is now ~11 hrs/week with the numbers shown, plus a reduced-scope variant that actually reaches 9 by naming what it cuts. A budget you cannot hit reads as personal failure rather than a planning error, which is why this mattered more than it looks.
+The full alignment audit against the framework and the sign-off record for each review round are in [CHANGELOG.md](CHANGELOG.md).
