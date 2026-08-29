@@ -6,7 +6,8 @@ Built 2026-07-08 through multi-model review (Codex, Gemini, Claude) and revised 
 
 | File | What it is | Use it for |
 |---|---|---|
-| [study-plan.md](study-plan.md) | The 6-week plan: budget, week-by-week, weekly review, Anki, where to use external tools instead, readiness rubric | The schedule. Start with "Tonight" at the top |
+| [study-plan.md](study-plan.md) | The 6-week plan: budget, week-by-week, weekly review, Anki, where to use external tools instead | The schedule. Start with "Tonight" at the top |
+| [competency-list.md](competency-list.md) | The readiness rubric — ten rows defining "ready" in testable terms, with week 1 and week 6 score columns | Read it in week 0; score it in week 1 and week 6. Every week's work should move a row |
 | [question-bank.md](question-bank.md) | 65 conceptual questions in 8 categories, each with a grounding artifact and answer-key pointers | The core drill: answer aloud, 2–4 min each, per the weekly schedule. First attempt cold |
 | [role-and-evidence.md](role-and-evidence.md) | Target role (Senior Backend / Product Platform), the evidence table, the AI-collaboration table, and what's missing for Staff | Positioning, resume framing, the "why not Staff?" answer |
 | [external-comparison.md](external-comparison.md) | Repo themes vs 8 verified public banks: covered / missing / better drilled elsewhere | Which tool to use for which topic; the reading list |

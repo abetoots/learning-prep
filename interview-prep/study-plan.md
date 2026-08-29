@@ -1,6 +1,6 @@
 # 6-Week Study Plan — Senior Backend / Product Platform Engineer
 
-**Tonight: 60 minutes.** Read the readiness rubric at the bottom of this file, then do the three Week 0 tasks. Then stop. Everything else starts tomorrow.
+**Tonight: 60 minutes.** Read [competency-list.md](competency-list.md), then do the three Week 0 tasks. Then stop. Everything else starts tomorrow.
 
 **The premise.** You already know this material — you proved that by building the system. What you can't reliably do yet is produce it on demand, out loud, with a clock running. So this plan *tests* you from day one rather than teaching you. Re-reading your own docs is not the study method here; it's raw material for recall, nothing more.
 
@@ -42,7 +42,7 @@ That's 55 hours, so 12 have to come out. Trimming a little from everything doesn
 
 Three things to write tonight. Skipping them is the most common way a plan like this quietly fails.
 
-1. **Competency list.** You already have one: the **readiness rubric** at the bottom of this document. Read it *now*, not in week 6. It defines what "ready" means in testable terms, and every week's work should visibly move a rubric row. Score yourself against it honestly in week 1 to get a baseline — you cannot see progress without one.
+1. **Competency list.** [`competency-list.md`](competency-list.md) — the readiness rubric. Read it now. It defines what "ready" means in testable terms, and every week's work should visibly move a row. Score it in week 1 for a baseline — you cannot see progress without one.
 2. **Error log.** Open [`error-log.md`](error-log.md) and read the column legend. The first row goes in during week 1. The *why* column is the point — a miss that only becomes an Anki card preserves the fact but never fixes the misconception. Both go in.
 3. **Implementation intention.** Write the literal sentence: *"After [something I already do every day], I will do [repo conceptual / drills / simulation] at [place]."* Motivation is not a plan. Also fix your stuck-rule now: **if blocked >10 minutes, write the error-log entry before looking anything up.**
 
@@ -82,7 +82,7 @@ Three things to write tonight. Skipping them is the most common way a plan like 
 - **Checkpoint:** section 4 complete with confidence ratings logged · crash-window diagrams drawn · mock #1 done + written debrief · answer key written and closed · 22+ problems.
 
 ### Week 4 — Security, testing, breadth vocabulary
-- **Repo conceptual (2h):** Sections 5 and 6 aloud, with confidence ratings. Do the external-comparison gap list (see `external-comparison.md` → the **"SD component vocabulary"** row, marked *Better drilled elsewhere*): pick the 3 weakest (typically: consistent hashing, sharding/partitioning strategy, cache invalidation, consensus/leader election). **70 min reading them as case studies** — for each, where it was actually used, what it cost, and where it failed; self-explain rather than skim. Then **20 min sources-closed**: sketch a contrasting-case table — *when you'd reach for it, when you deliberately wouldn't, what breaks if you pick wrong* — check it, and log the misses.
+- **Repo conceptual (2h):** Sections 5 and 6 aloud, with confidence ratings. Do the external-comparison gap list (see `external-comparison.md` → the **"SD component vocabulary"** row, marked *Better drilled elsewhere*): pick the 3 weakest (typically: consistent hashing, sharding/partitioning strategy, cache invalidation, consensus/leader election). First, one line per topic naming what it assumes you already have (consensus assumes a quorum; cache invalidation assumes a consistency model); a missing assumption is the first 20 of the 70 minutes. This is the only material here you never built, so it gets the prerequisite check the rest doesn't need. **70 min reading them as case studies** — for each, where it was actually used, what it cost, and where it failed; self-explain rather than skim. Then **20 min sources-closed**: sketch a contrasting-case table — *when you'd reach for it, when you deliberately wouldn't, what breaks if you pick wrong* — check it, and log the misses.
 
   *That 20-minute table is a **comprehension check**, not the retrieval that makes this stick. Reconstructing something you read an hour ago mostly tests working memory. **The real retrieval is scheduled for week 6**, after some forgetting.*
 - **Drills (4h):** NeetCode: heaps + intervals + greedy (**8 problems**). Re-solve 2 of week 3's misses. (Your Anki deck now includes the week-3 miss cards.)
@@ -146,24 +146,9 @@ What repo prep **wins** at — and standardized banks can't provide: a real prod
 
 ---
 
-## Readiness rubric (this is your competency list — read it in week 0, score it in week 1 and week 6)
+## Readiness rubric
 
-Pass = every row at "ready". Any "not yet" adds a week of that kind of work.
-
-| Signal | Ready looks like | Evidence |
-|---|---|---|
-| Architecture pitch | ≤5-min walkthrough, unprompted coverage of tenancy, ingestion, sends, metrics; concedes both known gaps before being asked | Recording, week 5–6 |
-| Conceptual depth | 10 randomly drawn question-bank items: 8+ hit the answer-pointer essentials without notes | Self-grade sheet |
-| Transfer | A never-seen design prompt produces a complete 45-min artifact with explicit tradeoffs | Week 4 & 6 artifacts |
-| Coding | Unseen LeetCode medium in ≤25 min, talking aloud, correct + complexity stated, 3 of last 4 attempts | Timed logs |
-| Recall | Anki mature retention ≥85%; core complexities/definitions instant | Anki stats |
-| Behavioral | 5 STAR stories; any of ~20 standard prompts mapped to one in <5s | Mock #2 + drill |
-| AI-collaboration judgment | On a PR with **known ground truth**: ≥2 of the known invariant defects found in 45 min, **with ≤1 false positive** (a "defect" that isn't one). Delegation boundary stated unprompted in <2 min | Week 4 artifact — answer key written *before* the review, findings graded against it |
-| Failure-mode fluency | Can diagram outbox/claim/CAS crash windows from a blank page and name each residual | Week 3 diagrams |
-| Calibration | Confidence ratings track actual scores within ~15 points; no category where you're systematically overconfident | Confidence log, weeks 3–6 |
-| Simulation | Full mock loop completed; debriefs show no repeated failure pattern from earlier mocks | Week 6 debriefs |
-
-**If you have to cut a rubric row, cut AI-collaboration's review round first** and keep the two week-5 STAR skeletons. The verbal probe ("how do you use AI?") is near-universal; the formal review round is the part resting on weaker evidence.
+Lives in [competency-list.md](competency-list.md). Score it in week 1 and week 6.
 
 ## Weekly time audit
 
