@@ -12,7 +12,7 @@ The repo was built partly with agentic coding, so a `[DYD]` tag isn't automatica
 - **`recognizes`** — partial; you know it when you see it but can't rebuild it. Re-encode it — reread, then rebuild from a blank page — before drilling it (`study-plan.md`, Week 1).
 - **`blank`** — nothing. Same, with the longer re-encoding.
 
-Mark what you can produce *right now*, never what you remember once knowing — a freshly reread ADR feels known whether or not it is.
+Mark what you can produce *right now*, never what you remember once knowing — a freshly reread ADR feels known whether or not it is. Date the mark. When a re-encoded item later passes cold — a cold pass that opens a later session, not the same-day retry — add that too: `blank 9/2 → defends 9/4`.
 
 **If the design wasn't yours, change the tag.** `[DYD]` → `[EVAL]` if you evaluated and approved it, `[ADOPT]` if you accepted it with a caveat. Then answer as "the decision I evaluated," not "my design." The interview tests judgment, not authorship — but the wording has to be true.
 
